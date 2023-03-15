@@ -1,0 +1,55 @@
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <File name="Pixels" fileName="logs/pixels.log">
+            <PatternLayout>
+                <Pattern>%d&#9;%m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <File name="ShadowbannedPixels" fileName="logs/shadowbannedPixels.log">
+            <PatternLayout>
+                <Pattern>%d&#9;%m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <File name="App" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d&#9;%m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <File name="Debug" fileName="logs/debug.log">
+            <PatternLayout>
+                <Pattern>%d&#9;%m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+        <Logger name="Pixels" level="INFO">
+            <AppenderRef ref="Pixels"/>
+        </Logger>
+
+        <Logger name="App" level="INFO">
+            <AppenderRef ref="App"/>
+        </Logger>
+
+        <Logger name="ShadowbannedPixels" level="INFO">
+            <AppenderRef ref="ShadowbannedPixels"/>
+        </Logger>
+
+        <Logger name="Debug" level="DEBUG">
+            <AppenderRef ref="Debug" />
+        </Logger>
+
+        <Logger name="com.zaxxer.hikari" level="ERROR" />
+        <Logger name="org.apache.commons.jcs3" level="ERROR" additivity="false" />
+    </Loggers>
+</Configuration>
