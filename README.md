@@ -36,7 +36,8 @@ The built `pxls*.jar` file is available in `target/`.
 
 ## Running
 
-Copy the built `pxls*.jar` along with the following (renamed) to the instance directory:
+Copy the build 'pxls".jar' along with the fallowing (renamed) to the intabce directory 
+
 
 * `reference.conf` (`pxls.conf`)
 * `roles-reference.conf` (`roles.conf`)
